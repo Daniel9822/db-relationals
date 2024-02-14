@@ -133,7 +133,7 @@ const downloadLink = () => {
     })
     .then((texto) => {
       // Crear un Blob con el contenido del archivo
-      const blob = new Blob([texto], { type: 'text/plain' })
+      const blob = new Blob([texto], { type: 'text/plain;charset=utf-8' })
 
       // Crear un enlace de descarga
       const downloadLink = document.createElement('a')
