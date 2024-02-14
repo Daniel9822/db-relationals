@@ -1,0 +1,39 @@
+1.¿Qué es una base de datos relacional y cuál es su estructura básica? 
+  
+  - Es una base de datos que organiza los datos en tablas relacionadas. La estructura básica incluye tablas, filas y columnas.
+
+2. ¿Cuál es la importancia de la integridad referencial en las bases de datos relacionales?
+
+    - Garantiza la consistencia de los datos al mantener relaciones válidas entre las tablas.
+
+3. Cuáles son algunas técnicas comunes de optimización de consultas en bases de datos relacionales?
+
+  - Uso de índices, optimización de consultas y desnormalización.
+
+4. ¿Qué es el lenguaje SQL y cuáles son sus principales componentes?
+
+  - SQL es un lenguaje de programación para gestionar bases de datos. Sus componentes son DDL, DML y DCL.
+
+5. ¿Cuál es la diferencia entre DDL, DML y DCL en SQL?
+
+  - DDL se utiliza para manipular los datos, DML para definir la estructura y DCL para controlar permisos de acceso.
+
+6. ¿Por qué es importante la normalización en el diseño de bases de datos relacionales?
+
+  - Para evitar redundancia y garantizar la integridad de los datos.
+
+7. ¿Cómo se manejan las transacciones en las bases de datos relacionales?
+
+  - Mediante sentencias SQL como BEGIN TRANSACTION, COMMIT y ROLLBACK.
+
+8. ¿Qué ventajas ofrece la replicación en bases de datos relacionales?
+
+  - Mejora la disponibilidad y la redundancia de los datos.
+
+9. ¿Cuál es el papel de los índices en la optimización del rendimiento en bases de datos relacionales?
+
+  - Mejoran el rendimiento de las consultas al permitir un acceso más rápido a los datos.
+
+10. ¿Qué factores pueden afectar negativamente el rendimiento de una consulta SQL y cómo se pueden mitigar?
+
+  - Falta de índices, consultas mal escritas y uso excesivo de funciones. Se pueden mitigar creando índices adecuados y optimizando consultas.
