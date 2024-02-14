@@ -18,9 +18,11 @@ function limpiarContenedor(tag) {
 
 const getQuestion = async (currentQuestion) => {
   //todo hacer el fetch
+  inputContainer.classList.add('fade-in');
   const questionForUser = questionsMock[currentQuestion]
 
   limpiarContenedor(inputContainer)
+
 
   question.innerHTML = questionForUser.question
 
@@ -51,6 +53,10 @@ const getQuestion = async (currentQuestion) => {
     label.appendChild(radioInput)
     inputContainer.appendChild(label)
   })
+
+  setTimeout(() => {
+    inputContainer.classList.remove('fade-in');
+  }, 1000);
 }
 
 if (!answersSelectedByUser) {
