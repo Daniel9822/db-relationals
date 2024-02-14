@@ -2,7 +2,9 @@ const server = require('./src/server')
 const sequelize = require('./src/config/db');
 require('./src/models')
 
-server.listen(3000, async () => {
+const PORT = process.env.PORT ?? 3000
+
+server.listen(PORT, async () => {
   try {
     await sequelize.authenticate();
     await sequelize.sync({force: true})
