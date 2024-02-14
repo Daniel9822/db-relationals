@@ -77,12 +77,9 @@ nextButton.addEventListener('click', async (e) => {
   if (count === 10) {
     count = 9
     limpiarContenedor(buttonContainer)
-    const span = document.createElement('span')
-    span.classList.add('score')
-
     const score = calculateScore()
-    span.innerHTML = `${score} de 100`
-    buttonContainer.appendChild(span)
+    vieScore(score)
+
     if (score > 70) {
       tsParticles.load({
         id: 'tsparticles',
@@ -94,8 +91,8 @@ nextButton.addEventListener('click', async (e) => {
       setTimeout(() => {
         modal.remove()
       }, 5000)
-      downloadLink()
     }
+    downloadLink()
   }
 
   await getQuestion(count)
@@ -145,7 +142,7 @@ const downloadLink = () => {
       // Agregar el enlace al cuerpo del documento
       document.body.appendChild(downloadLink)
 
-      downloadLink.click();
+      downloadLink.click()
       // Eliminar el enlace después de que se descargue el archivo
       setTimeout(() => {
         document.body.removeChild(downloadLink)
@@ -154,6 +151,14 @@ const downloadLink = () => {
     .catch((error) => {
       console.error('Error:', error)
     })
+}
+
+const vieScore = (score) => {
+  const span = document.createElement('span')
+  span.classList.add('score')
+
+  span.innerHTML = `${score} de 100`
+  buttonContainer.appendChild(span)
 }
 
 await getQuestion(0)
