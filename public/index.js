@@ -97,9 +97,9 @@ nextButton.addEventListener('click', async (e) => {
         }
       })
 
-      setTimeout(() => {
-        modal.remove()
-      }, 5000)
+      // setTimeout(() => {
+      //   modal.remove()
+      // }, 5000)
     }
     downloadLink()
   }

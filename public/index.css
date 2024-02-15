@@ -117,8 +117,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 5px;
-  min-height: 250px;
-  height: 260px;
 }
 
 .benefits > span {
@@ -212,6 +210,10 @@ body {
 .score {
   color: white;
   font-size: 20px;
+  font-weight: 800;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #0bdd128c;
 }
 
 .download {
