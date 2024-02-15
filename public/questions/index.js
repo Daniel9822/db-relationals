@@ -1,5 +1,4 @@
 import { questionsMock } from '../questions.js'
-// import txt from './question.txt'
 const inputContainer = document.querySelector('.inputContainer')
 const question = document.querySelector('.description')
 const nextButton = document.querySelector('.upgrade-btn')
@@ -10,6 +9,9 @@ let answersSelectedByUser = null
 let allAnswer = []
 let count = 0
 
+const click = new Audio('../tap.wav')
+click.volume = 0.3
+
 function limpiarContenedor(tag) {
   while (tag.firstChild) {
     tag.removeChild(tag.firstChild)
@@ -18,11 +20,10 @@ function limpiarContenedor(tag) {
 
 const getQuestion = async (currentQuestion) => {
   //todo hacer el fetch
-  inputContainer.classList.add('fade-in');
+  inputContainer.classList.add('fade-in')
   const questionForUser = questionsMock[currentQuestion]
 
   limpiarContenedor(inputContainer)
-
 
   question.innerHTML = questionForUser.question
 
@@ -34,11 +35,13 @@ const getQuestion = async (currentQuestion) => {
 
     const label = document.createElement('label')
 
-    label.addEventListener('click', () => {
+    label.addEventListener('click', async () => {
+      await click.play()
       const selected = document.querySelector('.selected')
       if (selected) {
         selected.classList.remove('selected')
       }
+
 
       label.classList.add('selected')
     })
@@ -55,8 +58,8 @@ const getQuestion = async (currentQuestion) => {
   })
 
   setTimeout(() => {
-    inputContainer.classList.remove('fade-in');
-  }, 1000);
+    inputContainer.classList.remove('fade-in')
+  }, 1000)
 }
 
 if (!answersSelectedByUser) {
